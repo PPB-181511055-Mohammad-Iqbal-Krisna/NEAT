@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.neat.TaskFragment.OnListFragmentInteractionListener;
 import com.example.neat.dummy.DummyContent.DummyItem;
 
 import java.util.List;
