@@ -50,6 +50,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         CheckBox task = (CheckBox) holder.constraintLayout.getViewById(R.id.checkBox);
         TextView dueDate = (TextView) holder.constraintLayout.getViewById(R.id.duedate);
         task.setText(mDataset[position]);
+        dueDate.setText(mDataset[position]);
 
     }
 
@@ -60,4 +61,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
 
+    private class CustomClass {
+    }
 }

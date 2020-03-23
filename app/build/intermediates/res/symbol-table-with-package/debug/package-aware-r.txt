@@ -1125,14 +1125,12 @@ id imageView
 id info
 id invisible
 id italic
-id item_number
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
 id left
 id line1
 id line3
-id list
 id listMode
 id list_item
 id masked
@@ -1306,8 +1304,6 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout fragment_task
-layout fragment_task_list
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout my_text_view

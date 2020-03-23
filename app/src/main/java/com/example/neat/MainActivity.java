@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
     EditText textBox;
@@ -37,6 +38,9 @@ public class MainActivity extends Activity {
         myDataset = new ArrayList<Task>( 2);
         myDataset.add(new Task("Tugas Proyek","3/03/2020"));
         myDataset.add(new Task("Tugas PPB","9/03/2020"));
+        myDataset.add(new Task("Tugas Database","29/03/2020"));
+
+        mAdapter = new MyAdapter(myDataset);
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
@@ -59,7 +63,7 @@ public class MainActivity extends Activity {
 
 
     public void onClick (View view){
-        Intent i = new Intent("com.example.neat.SecondActivity");
+        Intent i = new Intent(this,SecondActivity.class);
         i.putExtra("nomorTask", myDataset.size()+1);
         startActivityForResult(i, ADD_TASK_REQUEST_CODE);
 
