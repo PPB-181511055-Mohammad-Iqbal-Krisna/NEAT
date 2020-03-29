@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myDataset = new ArrayList<Task>( 2);
+        myDataset = new ArrayList<Task>(3);
         myDataset.add(new Task("Tugas Proyek","3/03/2020"));
         myDataset.add(new Task("Tugas PPB","9/03/2020"));
         myDataset.add(new Task("Tugas Database","29/03/2020"));

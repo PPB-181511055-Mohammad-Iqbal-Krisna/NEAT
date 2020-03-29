@@ -6,12 +6,14 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 
+import java.util.ArrayList;
+
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private String[] mDataset;
+    private ArrayList<Task> mDataset;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -27,7 +29,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset) {
+    public MyAdapter(ArrayList<Task> myDataset) {
         mDataset = myDataset;
     }
 
@@ -36,7 +38,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public MyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
                                                      int viewType) {
         // create a new view
-        ConstraintLayout v = (ConstraintLayout) LayoutInflater.from(parent.getContext())
+        ConstraintLayout v = (ConstraintLayout) LayoutInflater.from(parent.ge   task.setText(mDataset.get(position));
+        dueDate.setText(mDataset.get(position));tContext())
                 .inflate(R.layout.my_text_view, parent, false);
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
@@ -49,15 +52,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         // - replace the contents of the view with that element
         CheckBox task = (CheckBox) holder.constraintLayout.getViewById(R.id.checkBox);
         TextView dueDate = (TextView) holder.constraintLayout.getViewById(R.id.duedate);
-        task.setText(mDataset[position]);
-        dueDate.setText(mDataset[position]);
+
 
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataset.size();
     }
 
 
